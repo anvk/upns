@@ -1,0 +1,15 @@
+{
+  "apps": {
+    "yapp": {
+      "android": {
+        "appToken": "YOUR GOOGLE APP TOKEN GOES HERE"
+      },
+      "ios": {
+        "cert": "./certs/Cert.pem",
+        "key": "./certs/Key.pem",
+        "passphrase": "YOUR APPLE APP PASSPHRASE GOES HERE",
+        "production": false
+      }
+    }
+  }
+}
