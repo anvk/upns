@@ -40,11 +40,11 @@ Body post:
 {
   "devices": [
     {
-      "deviceid": "APA91bHsYkjy7Y339FUFOckszlKuGrgBu6lrDoThuc1WYt1RkoYCmoctWG9NIt2tED_eHeuW4L75Wgh2F3Euuymxo43wCGBroXNel4LNiCBx4_TNjC1n5BAWddYzjMXqT-R4LUBZ6OFSijSXXBecCfCQ9HSNz4dLuLMeHKJR6fpyJS-l0vRw2vQ",
+      "deviceid": "ANDROID_DEVICEID_HERE",
       "deviceVendor": "android"
     },
     {
-      "deviceid": "qqqae108d242fac1135c581593b48708e58076787fa51110f74d74eb13e6965b-R4LUBZ6OFSijSXXBecCfCQ9HSNz4dLuLMeHKJR6fpyJS-l0vRw2vQ",
+      "deviceid": "APPLE_PUSH_NOTIFICATION_TOKEN_HERE",
       "deviceVendor": "ios"
     }
   ],
@@ -55,3 +55,31 @@ Body post:
   "appName": "myApp"
 }
 ```
+
+### From curl command
+
+```
+curl -H 'Content-Type: application/json' -H 'x-access-token:YOUR_SECRET_GOES_HERE' -X POST -d '{"devices": [{"deviceid": "ANDROID_DEVICEID_HERE","deviceVendor": "android"}],"data": {"key1": "value1","key2": "value2"},"appName": "myApp"}' http://localhost:3000/api/v1/send
+```
+
+## License
+The MIT License (MIT)
+
+Copyright (c) 2014 Alexey Novak
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
