@@ -20,9 +20,17 @@ $ node main
 ### API spec:
 
 * **devices** - array of device objects
-  * **deviceid** - uuid associated with the device
+  * **deviceid** - uuid associated with the device. It is either `deviceid` for Android or `apns token` for Apple device
   * **deviceVendor** - `android` or `ios`
 * **data** - payload which will be sent to the devices
+* **gcmOptions** - extra options for android devices
+  * **delayWhileIdle** - true/false - wait until phone becomes idle to send a notification. By default it is true
+  * **timeToLive** - how long message will stay on GCM servers before. By default it is 3
+* **apnOptions** - extra options for ios devices
+  * **expiry** - number of seconds when notification will be expired. By default 1 hour
+  * **badge** - push notification badge
+  * **sound** - sound file to play when receive a push notification
+  * **alert** - push notification alert message
 * **appName** - name of the app in the webservice app configuration
 
 ### Call Example
