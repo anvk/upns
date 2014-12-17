@@ -28,7 +28,6 @@ $ node main
   * **timeToLive** - how long message will stay on GCM servers before. By default it is 3
 * **apnOptions** - extra options for ios devices
   * **expiry** - number of seconds when notification will be expired. By default 1 hour
-  * **badge** - push notification badge
   * **sound** - sound file to play when receive a push notification
   * **alert** - push notification alert message
 * **appName** - name of the app in the webservice app configuration
